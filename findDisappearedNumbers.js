@@ -3,6 +3,12 @@ Given an array of positive integers from 1 to n, where n is the size of the arra
 find the missing numbers if any numbers can only appear in the array at most twice.
 
 For example, If the input is [1, 2, 2], the output should be [3].
+
+
+Дан массив целых положительных чисел от 1 до n, где n - размер массива, 
+найдите недостающие числа, если любое из них может встречаться в массиве не более двух раз.
+
+Например, если на вход подано [1, 2, 2], то на выходе должно получиться [3].
 */
 
 function findDisappearedNumbers(nums) {
