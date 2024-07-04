@@ -1,0 +1,40 @@
+const person = {
+    username: "Dima",
+    
+    funcFunc: function() {
+        return function() {
+            return this.username
+        }
+    },
+    
+    funcArrow: function() {
+        return () => {
+            return this.username
+        }
+    },
+    
+    arrowFunc: () => {
+         return function() {
+            return this.username
+        }
+    },
+    
+    arrowArrow: () => {
+        return () => {
+            return this.username
+        }
+    },
+}
+
+const person1 = {
+    username: "Alex",
+    funcFunc: person.funcFunc(),
+    funcArrow: person.funcArrow(),
+    arrowFunc: person.arrowFunc(),
+    arrowArrow: person.arrowArrow()
+}
+
+console.log(person1.funcFunc())
+console.log(person1.funcArrow())
+console.log(person1.arrowFunc())
+console.log(person1.arrowArrow())
