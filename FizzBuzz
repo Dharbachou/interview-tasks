@@ -1,0 +1,38 @@
+for (let i = 0; i < 100;) console.log((++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || i)
+
+const CONDITIONS = [
+  [3, "FIZZ"],
+  [5, "BUZZ"]
+];
+
+var theArr = Array.from({ length: theArrayLength }, (theVal, theIndex) => theIndex);
+
+for (let i = 0; i < theArr.length; i++) {
+  for (let j = 0; j < CONDITIONS.length; j++) {
+    if ((i - 1) % CONDITIONS[j][0] === 0) {
+      thArr[i] += CONDITIONS[j][1]
+    }
+  }
+}
+
+console.log(theArr);
+
+var typeFizzBuzz = ((theArrayLength) => {
+  var theArr = Array.from(
+    { length: theArrayLength },
+    (theVal, theIndex) => theIndex,
+  );
+
+  return (theKvant, theName) => {
+    var theIndex = 0;
+
+    while ((theIndex += theKvant) < theArrayLength) {
+      theArr[theIndex] += theName;
+    }
+
+    return theArr;
+  };
+});
+
+const doFizzBuzz = typeFizzBuzz(20);
+console.log(doFizzBuzz(5, 'Buzz'));
